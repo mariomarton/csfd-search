@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ detail_object }}{% endblock %}
+
+{% block header %}
+    <a href="{% url 'search' %}" class="btn btn-secondary mb-4">&laquo; Späť na vyhľadávanie</a>
+    <h1 class="mb-5">{{ detail_object }}</h1>
+{% endblock %}
+
+{% block content %}{% endblock %}
