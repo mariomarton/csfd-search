@@ -9,7 +9,9 @@
 
 ## Installation
 
-1. After cloning the repository, install the required dependencies by running:
+
+1. After cloning the repository, set up and activate a virtual environment (optional) and then install the required
+   dependencies by running
 
 ```bash
 pip install -r requirements.txt
@@ -23,13 +25,7 @@ pip install -r requirements.txt
 DJANGO_SECRET_KEY=your-secret-key-here
 ```
 
-4. Run the database migrations:
-
-```bash
-python manage.py migrate
-```
-
-5. Start the development server:
+4. Start the development server:
 
 ```bash
 python manage.py runserver
