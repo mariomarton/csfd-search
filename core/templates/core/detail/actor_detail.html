@@ -1,0 +1,15 @@
+{% extends 'core/detail/base_detail.html' %}
+
+{% block content %}
+    <h3>Filmy</h3>
+    <ul class="list-group mb-5">
+        {% for film in detail_object.films.all %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'detail' 'film' film.id %}" class="text-decoration-none text-truncate"
+                   style="max-width: 80%;">{{ film }}</a>
+            </li>
+        {% empty %}
+            <li class="list-group-item text-muted">Žiadne filmy.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

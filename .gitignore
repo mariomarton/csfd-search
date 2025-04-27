@@ -186,3 +186,6 @@ cmake-build-*/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+
+.env
+

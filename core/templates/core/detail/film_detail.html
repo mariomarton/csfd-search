@@ -1,0 +1,15 @@
+{% extends 'core/detail/base_detail.html' %}
+
+{% block content %}
+    <h3>Herci</h3>
+    <ul class="list-group mb-5">
+        {% for actor in detail_object.actors.all %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'detail' 'actor' actor.id %}" class="text-decoration-none text-truncate"
+                   style="max-width: 80%;">{{ actor }}</a>
+            </li>
+        {% empty %}
+            <li class="list-group-item text-muted">Žiadni herci.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
