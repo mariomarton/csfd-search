@@ -41,3 +41,11 @@ def detail_view(request, model_name, pk):
 
     detail_object = get_object_or_404(model_class, pk=pk)
     return render(request, f'core/detail/{model_name}_detail.html', {'detail_object': detail_object})
+
+
+def page_not_found_view(request, exception):
+    return render(request, 'core/error.html', {'error_message': 'Stránka sa nenašla.'}, status=404)
+
+
+def server_error_view(request):
+    return render(request, 'core/error.html', {'error_message': 'Oops, chyba. Skúste to prosím neskôr.'}, status=500)
